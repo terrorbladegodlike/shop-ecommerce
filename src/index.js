@@ -9,13 +9,18 @@ import ProductProvider from './contexts/ProductContext';
 // Import Sidebar Provider
 import SidebarProvider from './contexts/SidebarContext';
 
+// Import Cart Provider
+import CartProvider from './contexts/CartContext';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <SidebarProvider>
-    <ProductProvider>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </ProductProvider>
+    <CartProvider>
+      <ProductProvider>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </ProductProvider>
+    </CartProvider>
   </SidebarProvider>
 );
