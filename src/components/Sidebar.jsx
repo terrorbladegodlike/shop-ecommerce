@@ -33,7 +33,7 @@ const Sidebar = () => {
           <IoMdArrowForward className='text-2xl' />
         </div>
       </div>
-      <div className='flex flex-col gap-y-2 h-[520px] lg:h-[540px] overflow-y-auto overflow-x-hidden border-b'>
+      <div className='flex flex-col gap-y-2 h-[450px] lg:h-[480px] overflow-y-auto overflow-x-hidden border-b'>
         {cart.map(item => {
           return (
             <CartItem item={item} key={item.id} />
@@ -54,6 +54,8 @@ const Sidebar = () => {
             <FiTrash2 />
           </div>
         </div>
+        <Link to={'/'} className='flex p-4 justify-center items-center bg-gray-200 text-primary w-full font-medium'>View cart</Link>
+        <Link to={'/'} className='flex p-4 justify-center items-center bg-primary text-white w-full font-medium'>Checkout</Link>
       </div>
     </div>
   )
