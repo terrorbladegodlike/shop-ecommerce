@@ -10,7 +10,7 @@ const Product = ({ product }) => {
   console.log(product)
 
   // Destructure Product
-  const { id, title, price, description, category, rating, image } = product
+  const { id, title, price, category, image } = product
 
   return (
     <div>

@@ -3,14 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-// Imoport Product Provider
+// Import Product Provider
 import ProductProvider from './contexts/ProductContext';
+
+// Import Sidebar Provider
+import SidebarProvider from './contexts/SidebarContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ProductProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </ProductProvider>
+  <SidebarProvider>
+    <ProductProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </ProductProvider>
+  </SidebarProvider>
 );
